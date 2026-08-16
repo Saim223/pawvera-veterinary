@@ -1,256 +1,254 @@
 @import "tailwindcss";
 
-@theme {
-  /* PAWVERA brand color system — Deep Teal / Sage / Soft Coral / Warm Ivory.
-     Deep Teal (#123B42) is used as the literal, exact brand color across
-     buttons, headings, and full dark surfaces (hero/footer/emergency) per
-     brand spec — that's why 500/700/900 share the same value below; only
-     the light tints (50–400) and the hover-darken (600) are derived. */
-  --color-paper: #faf8f3;
-  --color-paper-alt: #f3eee2;
-  --color-surface: #ffffff;
+  @theme {
+    /* PAWVERA brand color system — Deep Teal / Sage / Soft Coral / Warm Ivory.
+       Deep Teal (#123B42) is used as the literal, exact brand color across
+       buttons, headings, and full dark surfaces (hero/footer/emergency) per
+       brand spec — that's why 500/700/900 share the same value below; only
+       the light tints (50–400) and the hover-darken (600) are derived. */
+    --color-paper: #faf8f3;
+    --color-paper-alt: #f3eee2;
+    --color-surface: #ffffff;
 
-  --color-ink: #26363a;
-  --color-ink-soft: #5d6b6d;
-  --color-ink-faint: #647074;
+    --color-ink: #26363a;
+    --color-ink-soft: #5d6b6d;
+    --color-ink-faint: #647074;
 
-  --color-brand-50: #e9f1f0;
-  --color-brand-100: #d3e2e0;
-  --color-brand-200: #a8c2c0;
-  --color-brand-300: #7ca5a3;
-  --color-brand-400: #3f7378;
-  --color-brand-500: #123b42;
-  --color-brand-600: #0e3038;
-  --color-brand-700: #123b42;
-  --color-brand-900: #123b42;
+    --color-brand-50: #e9f1f0;
+    --color-brand-100: #d3e2e0;
+    --color-brand-200: #a8c2c0;
+    --color-brand-300: #7ca5a3;
+    --color-brand-400: #3f7378;
+    --color-brand-500: #123b42;
+    --color-brand-600: #0e3038;
+    --color-brand-700: #123b42;
+    --color-brand-900: #123b42;
 
-  --color-accent-100: #fbe4e2;
-  --color-accent-400: #f0a9a4;
-  --color-accent-500: #e98d87;
-  /* Deliberately much darker than 500 — this shade does double duty as (a)
-     text color on light accent-100 badges and (b) the hover-bg for
-     accent-500 buttons, both of which need real contrast against a light
-     coral. Buttons that darken to this on hover flip their text to white. */
-  --color-accent-600: #a8443d;
+    --color-accent-100: #fbe4e2;
+    --color-accent-400: #f0a9a4;
+    --color-accent-500: #e98d87;
+    /* Deliberately much darker than 500 — this shade does double duty as (a)
+       text color on light accent-100 badges and (b) the hover-bg for
+       accent-500 buttons, both of which need real contrast against a light
+       coral. Buttons that darken to this on hover flip their text to white. */
+    --color-accent-600: #a8443d;
 
-  --color-gold-400: #e8d6b5;
-  /* Champagne itself is too light for foreground text/icon use at any
-     background; this is a deeper bronze for that role, kept in the same
-     warm-metallic family. */
-  --color-gold-500: #7a5f35;
+    --color-gold-400: #e8d6b5;
+    /* Champagne itself is too light for foreground text/icon use at any
+       background; this is a deeper bronze for that role, kept in the same
+       warm-metallic family. */
+    --color-gold-500: #7a5f35;
 
-  --color-night: #0a2429;
-  --color-night-soft: #0f3037;
-  --color-night-line: rgba(232, 214, 181, 0.12);
+    --color-night: #0a2429;
+    --color-night-soft: #0f3037;
+    --color-night-line: rgba(232, 214, 181, 0.12);
 
-  --color-line: rgba(18, 59, 66, 0.12);
-  --color-line-soft: rgba(18, 59, 66, 0.06);
+    --color-line: rgba(18, 59, 66, 0.12);
+    --color-line-soft: rgba(18, 59, 66, 0.06);
 
-  /* Type */
-  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* Type */
+    --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+    --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Radius: pill for controls, one committed asymmetric notch for cards */
-  --radius-card: 0.75rem;
-  --radius-card-sm: 0.625rem;
+    /* Radius: pill for controls, one committed asymmetric notch for cards */
+    --radius-card: 0.75rem;
+    --radius-card-sm: 0.625rem;
 
-  /* Shadow: soft + layered, never harsh — tinted with Deep Teal, not black */
-  --shadow-xs: 0 1px 2px rgba(18, 59, 66, 0.06);
-  --shadow-sm: 0 6px 16px -8px rgba(18, 59, 66, 0.18);
-  --shadow-md: 0 20px 44px -16px rgba(18, 59, 66, 0.26);
-  --shadow-lg: 0 36px 72px -24px rgba(18, 59, 66, 0.34);
-  --shadow-glow-accent: 0 12px 32px -8px rgba(233, 141, 135, 0.4);
+    /* Shadow: soft + layered, never harsh — tinted with Deep Teal, not black */
+    --shadow-xs: 0 1px 2px rgba(18, 59, 66, 0.06);
+    --shadow-sm: 0 6px 16px -8px rgba(18, 59, 66, 0.18);
+    --shadow-md: 0 20px 44px -16px rgba(18, 59, 66, 0.26);
+    --shadow-lg: 0 36px 72px -24px rgba(18, 59, 66, 0.34);
+    --shadow-glow-accent: 0 12px 32px -8px rgba(233, 141, 135, 0.4);
 
-  /* Glassmorphism: frosted surfaces for elevated elements only (nav, floating
-     widgets, overlays, cards over imagery) — never for ordinary content cards.
-     White/ivory base per brand spec — never tinted green, blue, or coral. */
-  --color-glass-light: rgba(255, 255, 255, 0.58);
-  --color-glass-light-strong: rgba(255, 255, 255, 0.78);
-  --color-glass-dark: rgba(18, 59, 66, 0.52);
-  --color-glass-dark-strong: rgba(18, 59, 66, 0.68);
-  --color-glass-border-light: rgba(255, 255, 255, 0.55);
-  --color-glass-border-dark: rgba(255, 255, 255, 0.14);
-  --shadow-glass-light:
-    0 24px 48px -20px rgba(18, 59, 66, 0.2),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
-  --shadow-glass-dark:
-    0 24px 48px -20px rgba(6, 16, 18, 0.45),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+    /* Glassmorphism: frosted surfaces for elevated elements only (nav, floating
+       widgets, overlays, cards over imagery) — never for ordinary content cards.
+       White/ivory base per brand spec — never tinted green, blue, or coral. */
+    --color-glass-light: rgba(255, 255, 255, 0.58);
+    --color-glass-light-strong: rgba(255, 255, 255, 0.78);
+    --color-glass-dark: rgba(18, 59, 66, 0.52);
+    --color-glass-dark-strong: rgba(18, 59, 66, 0.68);
+    --color-glass-border-light: rgba(255, 255, 255, 0.55);
+    --color-glass-border-dark: rgba(255, 255, 255, 0.14);
+    --shadow-glass-light:
+      0 24px 48px -20px rgba(18, 59, 66, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    --shadow-glass-dark:
+      0 24px 48px -20px rgba(6, 16, 18, 0.45),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
 
-  --ease-premium: cubic-bezier(0.22, 0.8, 0.28, 1);
+    --ease-premium: cubic-bezier(0.22, 0.8, 0.28, 1);
 
-  --breakpoint-xs: 30rem;
+    --breakpoint-xs: 30rem;
 
-  --animate-marquee: marquee 30s linear infinite;
-}
-
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@layer base {
-  * {
-    border-color: var(--color-line);
+    --animate-marquee: marquee 30s linear infinite;
   }
 
-  html {
-    scroll-behavior: smooth;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
   }
 
-  @media (prefers-reduced-motion: reduce) {
+  @layer base {
+    * {
+      border-color: var(--color-line);
+    }
+
     html {
-      scroll-behavior: auto;
+      scroll-behavior: smooth;
     }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
-      scroll-behavior: auto !important;
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    body {
+      background: var(--color-paper);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Native <select> dropdowns open with the OS's own popup, which mostly
+       ignores our CSS — background-color on the options is one of the few
+       things browsers do honor, so every dropdown gets an off-white panel
+       instead of stark white. */
+    select option {
+      background-color: var(--color-paper);
+      color: var(--color-ink);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--font-display);
+      letter-spacing: -0.01em;
+    }
+
+    ::selection {
+      background: var(--color-brand-500);
+      color: var(--color-paper);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--color-brand-500);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-paper);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-brand-100);
+      border-radius: 999px;
+      border: 2px solid var(--color-paper);
+    }
+
+    /* Set by CatCursor once a fine-pointer device is confirmed — keeps the
+       native cursor as a fallback if JS is disabled instead of hiding it with
+       nothing to replace it. Text fields keep the native caret cursor since
+       precise placement matters more there than the cat does. */
+    .cat-cursor,
+    .cat-cursor * {
+      cursor: none !important;
+    }
+    .cat-cursor input:not([type]),
+    .cat-cursor input[type="text"],
+    .cat-cursor input[type="email"],
+    .cat-cursor input[type="password"],
+    .cat-cursor input[type="search"],
+    .cat-cursor input[type="tel"],
+    .cat-cursor input[type="url"],
+    .cat-cursor textarea {
+      cursor: text !important;
     }
   }
 
-  body {
-    background: var(--color-paper);
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
+  @layer utilities {
+    /* Signature card silhouette: one corner stays sharp, the rest round generously */
+    .notch-card {
+      border-radius: var(--radius-card) var(--radius-card) var(--radius-card) 0.375rem;
+    }
+    .notch-card-sm {
+      border-radius: var(--radius-card-sm) var(--radius-card-sm) var(--radius-card-sm) 0.3125rem;
+    }
 
-  /* Native <select> dropdowns open with the OS's own popup, which mostly
-     ignores our CSS — background-color on the options is one of the few
-     things browsers do honor, so every dropdown gets an off-white panel
-     instead of stark white. */
-  select option {
-    background-color: var(--color-paper);
-    color: var(--color-ink);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: var(--font-display);
-    letter-spacing: -0.01em;
-  }
-
-  ::selection {
-    background: var(--color-brand-500);
-    color: var(--color-paper);
-  }
-
-  :focus-visible {
-    outline: 2px solid var(--color-brand-500);
-    outline-offset: 3px;
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color-paper);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-brand-100);
-    border-radius: 999px;
-    border: 2px solid var(--color-paper);
-  }
-
-  /* Set by CatCursor once a fine-pointer device is confirmed — keeps the
-     native cursor as a fallback if JS is disabled instead of hiding it with
-     nothing to replace it. Text fields keep the native caret cursor since
-     precise placement matters more there than the cat does. */
-  .cat-cursor,
-  .cat-cursor * {
-    cursor: none !important;
-  }
-  .cat-cursor input:not([type]),
-  .cat-cursor input[type="text"],
-  .cat-cursor input[type="email"],
-  .cat-cursor input[type="password"],
-  .cat-cursor input[type="search"],
-  .cat-cursor input[type="tel"],
-  .cat-cursor input[type="url"],
-  .cat-cursor textarea {
-    cursor: text !important;
-  }
-}
-
-@layer utilities {
-  /* Signature card silhouette: one corner stays sharp, the rest round generously */
-  .notch-card {
-    border-radius: var(--radius-card) var(--radius-card) var(--radius-card) 0.375rem;
-  }
-  .notch-card-sm {
-    border-radius: var(--radius-card-sm) var(--radius-card-sm) var(--radius-card-sm) 0.3125rem;
-  }
-
-  /* Organic blob shape for the doctor message panel */
-  .blob-panel {
-    border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
-  }
-  @media (max-width: 47.9375rem) {
+    /* Organic blob shape for the doctor message panel */
     .blob-panel {
-      border-radius: 2.5rem;
+      border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
     }
-  }
+    @media (max-width: 47.9375rem) {
+      .blob-panel {
+        border-radius: 2.5rem;
+      }
+    }
 
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+      text-wrap: balance;
+    }
 
-  /* Frosted glass, light — for surfaces that sit over imagery/gradients on
-     otherwise-paper sections (e.g. the stats bar overlapping the hero).
-     Border is left to the consumer (border-line for nav-over-content,
-     border-white/N for glass-over-imagery) since the right contrast differs
-     by what's behind it. */
-  .glass {
-    background: var(--color-glass-light);
-    box-shadow: var(--shadow-glass-light);
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
-  }
-
-  /* Frosted glass, dark — for surfaces on brand-900/night sections (nav,
-     floating widgets, call card panels, overlays). */
-  .glass-dark {
-    background: var(--color-glass-dark);
-    box-shadow: var(--shadow-glass-dark);
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
-  }
-
-  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    /* Frosted glass, light — for surfaces that sit over imagery/gradients on
+       otherwise-paper sections (e.g. the stats bar overlapping the hero).
+       Border is left to the consumer (border-line for nav-over-content,
+       border-white/N for glass-over-imagery) since the right contrast differs
+       by what's behind it. */
     .glass {
-      background: var(--color-glass-light-strong);
+      background: var(--color-glass-light);
+      box-shadow: var(--shadow-glass-light);
+      backdrop-filter: blur(28px);
     }
+
+    /* Frosted glass, dark — for surfaces on brand-900/night sections (nav,
+       floating widgets, call card panels, overlays). */
     .glass-dark {
-      background: var(--color-glass-dark-strong);
+      background: var(--color-glass-dark);
+      box-shadow: var(--shadow-glass-dark);
+      backdrop-filter: blur(28px);
     }
-  }
 
-  .container-page {
-    width: 100%;
-    max-width: 84rem;
-    margin-inline: auto;
-    padding-inline: 1.25rem;
-  }
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .glass {
+        background: var(--color-glass-light-strong);
+      }
+      .glass-dark {
+        background: var(--color-glass-dark-strong);
+      }
+    }
 
-  @media (min-width: 40rem) {
     .container-page {
-      padding-inline: 2rem;
+      width: 100%;
+      max-width: 84rem;
+      margin-inline: auto;
+      padding-inline: 1.25rem;
     }
-  }
 
-  @media (min-width: 80rem) {
-    .container-page {
-      padding-inline: 2.5rem;
+    @media (min-width: 40rem) {
+      .container-page {
+        padding-inline: 2rem;
+      }
+    }
+
+    @media (min-width: 80rem) {
+      .container-page {
+        padding-inline: 2.5rem;
+      }
     }
   }
-}
